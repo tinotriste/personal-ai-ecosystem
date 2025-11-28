@@ -25,22 +25,16 @@ Your AI reads this when you mention courses, books, skills, or education.
 
 ## Tools I Use
 
+{{USER_TOOLS}}
+
 <!-- Update with your actual tools -->
-
-**Learning Platforms**:
-- <!-- e.g., Coursera, Udemy, Skillshare, LinkedIn Learning -->
-
-**Note-Taking**:
-- <!-- e.g., Notion, Obsidian, Roam Research -->
-
-**Flashcards/Spaced Repetition**:
-- <!-- e.g., Anki, Quizlet, RemNote -->
-
-**Reading**:
-- <!-- e.g., Kindle, Audible, Readwise -->
-
-**Practice**:
-- <!-- e.g., LeetCode, Duolingo, instrument practice apps -->
+<!-- Example categories:
+- Learning Platforms: Coursera, Udemy, Skillshare, LinkedIn Learning
+- Note-Taking: Notion, Obsidian, Roam Research
+- Flashcards/Spaced Repetition: Anki, Quizlet, RemNote
+- Reading: Kindle, Audible, Readwise
+- Practice: LeetCode, Duolingo, instrument practice apps
+-->
 
 ## Key Contacts
 

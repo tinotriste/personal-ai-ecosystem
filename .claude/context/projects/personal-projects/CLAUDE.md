@@ -24,19 +24,15 @@ Your AI reads this when you mention side projects, hobbies, or creative work.
 
 ## Tools I Use
 
+{{USER_TOOLS}}
+
 <!-- Update with your actual tools -->
-
-**Development**:
-- <!-- e.g., VS Code, GitHub, Vercel -->
-
-**Design**:
-- <!-- e.g., Figma, Canva, Adobe Creative Suite -->
-
-**Writing/Content**:
-- <!-- e.g., Notion, Obsidian, Medium -->
-
-**Version Control**:
-- <!-- e.g., GitHub, GitLab -->
+<!-- Example categories:
+- Development: VS Code, GitHub, Vercel
+- Design: Figma, Canva, Adobe Creative Suite
+- Writing/Content: Notion, Obsidian, Medium
+- Version Control: GitHub, GitLab
+-->
 
 ## Key Contacts
 

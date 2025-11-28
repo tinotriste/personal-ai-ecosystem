@@ -25,22 +25,16 @@ Your AI reads this when you mention fitness, nutrition, sleep, or wellness.
 
 ## Tools I Use
 
+{{USER_TOOLS}}
+
 <!-- Update with your actual tools -->
-
-**Fitness Tracking**:
-- <!-- e.g., Apple Health, Fitbit, Garmin, Strava -->
-
-**Workout Apps**:
-- <!-- e.g., Strong, Fitbod, Nike Training Club -->
-
-**Nutrition**:
-- <!-- e.g., MyFitnessPal, Cronometer, Noom -->
-
-**Sleep Tracking**:
-- <!-- e.g., Apple Watch, Oura Ring, Sleep Cycle -->
-
-**Mental Health**:
-- <!-- e.g., Headspace, Calm, therapy apps -->
+<!-- Example categories:
+- Fitness Tracking: Apple Health, Fitbit, Garmin, Strava
+- Workout Apps: Strong, Fitbod, Nike Training Club
+- Nutrition: MyFitnessPal, Cronometer, Noom
+- Sleep Tracking: Apple Watch, Oura Ring, Sleep Cycle
+- Mental Health: Headspace, Calm, therapy apps
+-->
 
 ## Key Contacts
 

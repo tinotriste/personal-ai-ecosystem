@@ -24,19 +24,15 @@ Your AI reads this when you mention work topics.
 
 ## Tools I Use
 
+{{USER_TOOLS}}
+
 <!-- Update with your actual tools -->
-
-**Project Management**:
-- <!-- e.g., Notion, Asana, Linear, Trello -->
-
-**Communication**:
-- <!-- e.g., Slack, Microsoft Teams, Email -->
-
-**Development/Creation**:
-- <!-- e.g., VS Code, Figma, Google Workspace -->
-
-**Time Tracking**:
-- <!-- e.g., Toggl, Harvest, Clockify -->
+<!-- Example categories:
+- Project Management: Notion, Asana, Linear, Trello
+- Communication: Slack, Microsoft Teams, Email
+- Development/Creation: VS Code, Figma, Google Workspace
+- Time Tracking: Toggl, Harvest, Clockify
+-->
 
 ## Key Contacts
 
