@@ -47,11 +47,17 @@ cd personal-ai-ecosystem
 ./install.sh
 ```
 
-*Note: The installation script will be available in Phase 3. For now, explore the repository structure to understand the framework.*
+The setup wizard guides you through personalising your AI assistant in about 2-3 minutes.
 
 ### 3. Start using Kai
 
-Once installed, simply run Claude Code in any directory and your personalised AI assistant will be ready to help.
+Once installed, run Claude Code in the repository directory:
+
+```bash
+claude
+```
+
+Your personalised AI assistant will be ready to help, with full awareness of your context and preferences.
 
 ---
 
@@ -60,7 +66,7 @@ Once installed, simply run Claude Code in any directory and your personalised AI
 ```
 personal-ai-ecosystem/
 ├── README.md                 # This file
-├── install.sh                # Interactive setup script (coming soon)
+├── install.sh                # Interactive setup script
 ├── .claude/                  # Claude Code configuration directory
 │   ├── agents/               # Subagent definitions for specialised tasks
 │   ├── commands/             # Custom slash commands
@@ -93,10 +99,37 @@ personal-ai-ecosystem/
 
 Comprehensive documentation is available in the `docs/` folder:
 
-- **Getting Started** - First-time setup and configuration *(coming soon)*
-- **Concepts** - Understanding context engineering and memory management *(coming soon)*
-- **Features** - Deep dives into skills, hooks, agents, and more *(coming soon)*
-- **Guides** - Step-by-step tutorials for customisation *(coming soon)*
+### Concepts
+
+Understand the foundational ideas behind the framework:
+
+- [Progressive Disclosure](docs/concepts/progressive-disclosure.md) - Why context loads on-demand
+- [The CLAUDE.md Pattern](docs/concepts/claude-md-pattern.md) - How context files provide information
+- [Memory Management](docs/concepts/memory-management.md) - How your AI remembers across sessions
+- [Context-First Design](docs/concepts/context-first-design.md) - Why context engineering matters
+
+### Features
+
+Learn about what Kai can do:
+
+- [Skills](docs/features/skills.md) - Reusable workflows for common tasks
+- [Memory](docs/features/memory.md) - Persistent knowledge about you and your work
+- [Hooks](docs/features/hooks.md) - Automated event-driven actions
+- [Agents](docs/features/agents.md) - Specialised AI personalities for specific tasks
+- [Output Styles](docs/features/output-styles.md) - How your AI communicates
+
+### Guides
+
+Step-by-step tutorials for common tasks:
+
+- [Installation](docs/guides/installation.md) - Complete setup instructions
+- [Adding Domains](docs/guides/adding-domains.md) - Add new areas for AI assistance
+- [Creating Skills](docs/guides/creating-skills.md) - Build custom workflows
+- [Customising Personality](docs/guides/customising-personality.md) - Adjust AI communication style
+
+### Support
+
+- [Troubleshooting](docs/troubleshooting.md) - Common issues and solutions
 
 ---
 
