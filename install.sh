@@ -388,12 +388,9 @@ replace_placeholder() {
     local escaped_value
     escaped_value=$(printf '%s\n' "$value" | sed -e 's/[\/&]/\\&/g')
 
-    # Escape the placeholder for sed (escape curly braces)
-    local escaped_placeholder
-    escaped_placeholder=$(printf '%s\n' "$placeholder" | sed -e 's/[{}]/\\&/g')
-
-    # Perform the replacement
-    sed "${SED_INPLACE[@]}" "s/${escaped_placeholder}/${escaped_value}/g" "$file_path"
+    # Use placeholder directly - curly braces are literal in basic sed regex
+    # (escaping them with \ actually triggers interval syntax on BSD sed)
+    sed "${SED_INPLACE[@]}" "s/${placeholder}/${escaped_value}/g" "$file_path"
 }
 
 # Replace a placeholder with content from another file
