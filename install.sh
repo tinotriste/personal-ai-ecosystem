@@ -419,11 +419,15 @@ replace_placeholder_with_file() {
     temp_file=$(mktemp)
 
     # Use awk for multiline replacement (more reliable than sed for this)
-    awk -v placeholder="$placeholder" -v content="$content" '
+    # Escape braces in placeholder for gsub regex (ERE treats {} as quantifiers)
+    local escaped_placeholder
+    escaped_placeholder=$(printf '%s' "$placeholder" | sed 's/[{}]/\\\\&/g')
+
+    awk -v literal_placeholder="$placeholder" -v regex_placeholder="$escaped_placeholder" -v content="$content" '
     {
-        if (index($0, placeholder) > 0) {
+        if (index($0, literal_placeholder) > 0) {
             # Replace the placeholder with the content
-            gsub(placeholder, content)
+            gsub(regex_placeholder, content)
         }
         print
     }
@@ -694,11 +698,18 @@ process_templates() {
         fi
     done
 
+    # Process memory CLAUDE.md
+    echo "Configuring memory briefing..."
+    replace_placeholder "${MEMORY_DIR}/CLAUDE.md" "{{USER_NAME}}" "$USER_NAME"
+    replace_placeholder "${MEMORY_DIR}/CLAUDE.md" "{{AI_NAME}}" "$AI_NAME"
+    print_success "  memory/CLAUDE.md configured"
+
     # Process memory files with date
     echo "Setting up memory files..."
     replace_placeholder "${MEMORY_DIR}/work_status.md" "{{DATE}}" "$current_date"
     replace_placeholder "${MEMORY_DIR}/journal.md" "{{DATE}}" "$current_date"
     replace_placeholder "${MEMORY_DIR}/learnings_log.md" "{{DATE}}" "$current_date"
+    replace_placeholder "${MEMORY_DIR}/contacts.md" "{{DATE}}" "$current_date"
     print_success "  Memory files initialised with date: ${current_date}"
 
     echo ""
