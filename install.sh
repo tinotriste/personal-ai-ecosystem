@@ -410,26 +410,33 @@ replace_placeholder_with_file() {
         return 1
     fi
 
-    # Read the source file content
-    local content
-    content=$(cat "$source_file")
-
     # Create a temporary file with the replacement
     local temp_file
     temp_file=$(mktemp)
 
-    # Use awk for multiline replacement (more reliable than sed for this)
-    # Escape braces in placeholder for gsub regex (ERE treats {} as quantifiers)
-    local escaped_placeholder
-    escaped_placeholder=$(printf '%s' "$placeholder" | sed 's/[{}]/\\\\&/g')
-
-    awk -v literal_placeholder="$placeholder" -v regex_placeholder="$escaped_placeholder" -v content="$content" '
-    {
-        if (index($0, literal_placeholder) > 0) {
-            # Replace the placeholder with the content
-            gsub(regex_placeholder, content)
+    # Use awk for multiline replacement
+    # Read source content from file (not -v) to handle multiline properly
+    awk -v placeholder="$placeholder" -v source="$source_file" '
+    BEGIN {
+        # Read source file content
+        content = ""
+        while ((getline line < source) > 0) {
+            content = content (content ? "\n" : "") line
         }
-        print
+        close(source)
+    }
+    {
+        if (index($0, placeholder) > 0) {
+            # Simple string replacement using split and join
+            n = split($0, parts, placeholder)
+            result = parts[1]
+            for (i = 2; i <= n; i++) {
+                result = result content parts[i]
+            }
+            print result
+        } else {
+            print
+        }
     }
     ' "$target_file" > "$temp_file"
 
