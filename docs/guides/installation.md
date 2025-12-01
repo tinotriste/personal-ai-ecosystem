@@ -4,47 +4,67 @@
 
 This guide walks you through installing and configuring your personal AI ecosystem.
 
+---
+
 ## Prerequisites
 
-Before you begin, ensure you have:
+### 1. Install VS Code (Code Editor)
 
-### Operating System
-- **macOS** (10.15 or later)
-- **Linux** (any modern distribution)
-- **Windows** users: Install [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install) first
+VS Code is a free code editor that makes it easy to view and edit your AI ecosystem files.
 
-### Required Software
+1. Go to [code.visualstudio.com/download](https://code.visualstudio.com/download)
+2. Download the version for your operating system
+3. Run the installer and follow the prompts
 
-**Git** - For cloning the repository
+### 2. Open the Terminal
 
-Check if installed:
+The terminal is where you'll run commands. VS Code has a built-in terminal:
+
+1. Open VS Code
+2. Go to **View → Terminal** (or press `` Ctrl+` `` on Windows/Linux, `` Cmd+` `` on Mac)
+3. A terminal panel will appear at the bottom of VS Code
+
+> **Alternative terminals:**
+> - **macOS**: Spotlight search for "Terminal"
+> - **Linux**: Search for "Terminal" in your applications
+> - **Windows**: Use PowerShell or [install WSL](https://learn.microsoft.com/en-us/windows/wsl/install) for Linux commands
+
+### 3. Install Claude Code
+
+Claude Code is Anthropic's AI coding assistant that powers your ecosystem.
+
+1. Visit [docs.anthropic.com/en/docs/claude-code/getting-started](https://docs.anthropic.com/en/docs/claude-code/getting-started)
+2. Follow the installation instructions for your operating system
+3. Complete the authentication with your Anthropic account
+
+Verify it's installed by typing in your terminal:
+```bash
+claude --version
+```
+
+### 4. Verify Git is Installed
+
+Git is usually pre-installed on macOS and Linux. Check by typing:
 ```bash
 git --version
 ```
 
-Expected output:
-```
-git version 2.39.0
-```
+If you see a version number (e.g., `git version 2.39.0`), you're ready.
 
 If not installed:
-- macOS: `xcode-select --install`
-- Linux: `sudo apt install git` or equivalent for your distribution
+- **macOS**: Run `xcode-select --install` in terminal
+- **Linux**: Run `sudo apt install git` (Ubuntu/Debian) or equivalent
+- **Windows**: Download from [git-scm.com/downloads](https://git-scm.com/downloads)
 
-**Terminal access** - You'll need to run commands in a terminal
+### Operating System Notes
 
-- macOS: Use Terminal.app or iTerm2
-- Linux: Use your preferred terminal
-- Windows/WSL: Use the WSL terminal
+| OS | Status |
+|----|--------|
+| **macOS** | Fully supported |
+| **Linux** | Fully supported |
+| **Windows** | Requires [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) - run all commands inside WSL |
 
-**Claude Code CLI** - The AI assistant that powers your ecosystem
-
-Install Claude Code from [claude.ai/claude-code](https://claude.ai/claude-code) and follow their authentication instructions.
-
-Verify installation:
-```bash
-claude --version
-```
+---
 
 ## Step 1: Clone the Repository
 

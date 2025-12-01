@@ -24,11 +24,18 @@ Kai is designed for tech-adjacent users who are comfortable with basic terminal 
 
 ## Prerequisites
 
-Before installing Kai, ensure you have:
+Before installing Kai, you'll need:
 
-- **Operating System**: macOS or Linux (Windows users: WSL required)
-- **Git**: Installed and configured
-- **Claude Code CLI**: Installed and authenticated with your Anthropic account
+| Requirement | What it is | How to get it |
+|-------------|-----------|---------------|
+| **VS Code** | A code editor for viewing and editing files | [Download VS Code](https://code.visualstudio.com/download) |
+| **Terminal** | Command-line interface for running scripts | Built into VS Code (View → Terminal) |
+| **Claude Code** | Anthropic's AI coding assistant | [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started) |
+| **Git** | Version control (usually pre-installed) | [Install Git](https://git-scm.com/downloads) |
+
+> **Windows users**: Install [WSL (Windows Subsystem for Linux)](https://learn.microsoft.com/en-us/windows/wsl/install) first, then follow Linux instructions inside WSL.
+
+**New to these tools?** See the [detailed installation guide](docs/guides/installation.md) for step-by-step instructions.
 
 ---
 
